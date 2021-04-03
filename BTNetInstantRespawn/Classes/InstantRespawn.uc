@@ -6,8 +6,8 @@ class InstantRespawn extends Mutator;
 
 struct BTNet_Players
 {
-  	var PlayerPawn PP;
-  	var bool       isBeingKilledByScript;
+	var PlayerPawn PP;
+	var bool       isBeingKilledByScript;
 };
 
 var BTNet_Players PlayersArray[32];
@@ -26,7 +26,7 @@ function PreBeginPlay() {
 	Log("| ------------------------------------------------------------------------ |");
 	Log("| Author:      Dizzy <dizzy@bunnytrack.net>                                |");
 	Log("| Description: Instantly respawns players when they die                    |");
-	Log("| Version:     2021-04-02                                                  |");
+	Log("| Version:     2021-04-03                                                  |");
 	Log("| Website:     bunnytrack.net                                              |");
 	Log("| ------------------------------------------------------------------------ |");
 	Log("| Released under the Creative Commons Attribution-NonCommercial-ShareAlike |");
@@ -108,11 +108,13 @@ function ModifyPlayer(Pawn Other) {
 	 * This mod is released under the Creative Commons Attribution-NonCommercial-ShareAlike license. 
 	 * Visible, client-side attribution to BunnyTrack.net is required to use the mod and/or its code.
 	 */
-    PlayerPawn(Other).ClientMessage("[BTNet] This server uses the Instant Respawn mutator from BunnyTrack.net");
+	PlayerPawn(Other).ClientMessage("[BTNet] This server uses the Instant Respawn mutator from BunnyTrack.net");
+
+	Super.ModifyPlayer(Other);
 }
 
 defaultproperties
 {
-    bAlwaysRelevant=true
-    RemoteRole=ROLE_SimulatedProxy
+	bAlwaysRelevant=true
+	RemoteRole=ROLE_SimulatedProxy
 }
