@@ -26,7 +26,7 @@ function PreBeginPlay() {
 	Log("| ------------------------------------------------------------------------ |");
 	Log("| Author:      Dizzy <dizzy@bunnytrack.net>                                |");
 	Log("| Description: Instantly respawns players when they die                    |");
-	Log("| Version:     2021-04-03                                                  |");
+	Log("| Version:     2021-03-04                                                  |");
 	Log("| Website:     bunnytrack.net                                              |");
 	Log("| ------------------------------------------------------------------------ |");
 	Log("| Released under the Creative Commons Attribution-NonCommercial-ShareAlike |");
