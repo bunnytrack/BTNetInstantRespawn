@@ -12,6 +12,9 @@ A mod for Unreal Tournament (UT99) servers which makes players instantly respawn
 3. Under `[Engine.GameEngine]` add: `ServerActors=BTNetInstantRespawn.InstantRespawn`
 4. Restart your server
 
+## Known Issues
+* The mutator is prevented from working in BunnyTrack maps which use the *BTME* package by Bloeb (at least versions <= v4). This is because BTME searches for and unloads any mods which contain the string `Insta` in their class names. This results in `InstantRespawn` being unloaded unnecessarily. This is an issue with BTME and not with BTNetInstantRespawn. A workaround is changing the name of the `InstantRespawn` class to something else, e.g. `IR`.
+
 ## Licence
 This mutator is released under the Creative Commons Attribution-NonCommercial-ShareAlike license. 
 Visible, client-side attribution to BunnyTrack.net is required to use the mod and/or its code.
