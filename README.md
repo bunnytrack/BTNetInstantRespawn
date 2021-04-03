@@ -17,7 +17,7 @@ This mutator is released under the Creative Commons Attribution-NonCommercial-Sh
 Visible, client-side attribution to BunnyTrack.net is required to use the mod and/or its code.
 
 ## Version
-2021-04-02
+2021-04-03
 
 ## Website
 https://bunnytrack.net/
